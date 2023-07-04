@@ -32,7 +32,6 @@ public class UserService {
         User user = userRepository.findByPhoneNumber(phoneNumber)
                 .orElseThrow(() -> new RuntimeException("전화번호가 중복입니다."));
 
-
+        user.update(request.getPhoneNumber(), request.getGuardianName(), request.getGuardianPhoneNumber());
     }
-
 }

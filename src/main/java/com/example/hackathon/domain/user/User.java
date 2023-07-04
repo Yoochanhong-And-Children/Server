@@ -30,10 +30,9 @@ public class User {
     @Column(columnDefinition = "char(255) default ''")
     private String deviceToken;
 
-    public void update(String phoneNumber,String guardianName,String guardianPhoneNumber ,String deviceToken){
-        this.phoneNumber=phoneNumber;
-        this.guardianName=guardianName;
-        this.guardianPhoneNumber=guardianPhoneNumber;
+    public void update(String phoneNumber, String guardianName, String guardianPhoneNumber) {
+        this.phoneNumber = phoneNumber;
+        this.guardianName = guardianName;
+        this.guardianPhoneNumber = guardianPhoneNumber;
     }
-
 }
