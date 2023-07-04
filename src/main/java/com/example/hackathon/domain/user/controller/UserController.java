@@ -23,7 +23,7 @@ public class UserController {
     }
 
 
-    @PatchMapping("/update/{phoneNumber}")
+    @PatchMapping("/{phoneNumber}")
     public void update(@PathVariable String phoneNumber, @RequestBody @Valid UpdateRequest request) {
         userService.updateUser(phoneNumber, request);
     }
