@@ -1,4 +1,4 @@
-package com.example.hackathon.domain.user.repository.dto;
+package com.example.hackathon.domain.user.controller.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -23,4 +23,5 @@ public class SignUpRequest {
 
     @NotBlank
     private String deviceToken;
+
 }
