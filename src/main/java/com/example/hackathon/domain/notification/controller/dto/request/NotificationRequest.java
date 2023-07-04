@@ -6,5 +6,5 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class NotificationRequest {
-    private String phoneNumber;
+    private String deviceToken;
 }

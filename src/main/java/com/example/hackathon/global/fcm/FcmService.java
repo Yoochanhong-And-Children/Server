@@ -1,5 +1,6 @@
 package com.example.hackathon.global.fcm;
 
+import com.google.api.core.ApiFuture;
 import com.google.firebase.messaging.*;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,9 @@ public class FcmService {
                         .build())
                 .build();
 
-        try {
-            FirebaseMessaging.getInstance().send(message);
-        } catch (FirebaseMessagingException e) {
-            e.printStackTrace();
-            throw new RuntimeException("푸시 알림을 보내는데 실패했습니다.", e);
+        ApiFuture<String> stringApiFuture = FirebaseMessaging.getInstance().sendAsync(message);
+        if (stringApiFuture.isDone() == Boolean.FALSE) {
+            throw new IllegalArgumentException("푸시 알림 전송에 실패하였습니다.");
         }
     }
 }

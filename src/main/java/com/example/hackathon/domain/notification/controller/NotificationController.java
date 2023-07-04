@@ -15,6 +15,6 @@ public class NotificationController {
 
     @PostMapping("/notification")
     public void sendNotification(@RequestBody NotificationRequest request) {
-        notificationService.sendNotification(request.getPhoneNumber());
+        notificationService.sendNotification(request.getDeviceToken());
     }
 }
