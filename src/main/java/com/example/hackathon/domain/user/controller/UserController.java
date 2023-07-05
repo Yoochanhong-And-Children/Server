@@ -22,13 +22,13 @@ public class UserController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PatchMapping("/{phoneNumber}")
-    public void update(@PathVariable("phoneNumber") String phoneNumber, @Valid @RequestBody UpdateRequest request) {
-        userService.updateUser(phoneNumber, request);
+    @PatchMapping("/{id}")
+    public void updateUser(@PathVariable("id") Long id, @Valid @RequestBody UpdateRequest request) {
+        userService.updateUser(id, request);
     }
 
-    @GetMapping("/{phoneNumber}")
-    public UserInfoResponse findByPhoneNumber(@PathVariable String phoneNumber) {
-        return userService.findByPhoneNumber(phoneNumber);
+    @GetMapping("/{id}")
+    public UserInfoResponse getUserInfo(@PathVariable Long id) {
+        return userService.findByPhoneNumber(id);
     }
 }

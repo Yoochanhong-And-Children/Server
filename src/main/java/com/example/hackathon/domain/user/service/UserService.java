@@ -29,19 +29,20 @@ public class UserService {
     }
 
     @Transactional
-    public void updateUser(String phoneNumber, UpdateRequest request) {
-        User user = userRepository.findByPhoneNumber(phoneNumber)
+    public void updateUser(Long id, UpdateRequest request) {
+        User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("찾을 수 없습니다."));
 
         user.update(request.getPhoneNumber(), request.getGuardianName(), request.getGuardianPhoneNumber());
     }
 
     @Transactional
-    public UserInfoResponse findByPhoneNumber(String phoneNumber) {
-        User user = userRepository.findByPhoneNumber(phoneNumber)
+    public UserInfoResponse findByPhoneNumber(Long id) {
+        User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("찾을 수 없습니다."));
 
         return new UserInfoResponse(
+                user.getId(),
                 user.getPhoneNumber(),
                 user.getGuardianName(),
                 user.getGuardianPhoneNumber()

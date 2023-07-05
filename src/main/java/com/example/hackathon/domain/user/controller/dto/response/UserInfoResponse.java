@@ -7,6 +7,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class UserInfoResponse {
+    private final Long id;
     private final String phoneNumber;
     private final String guardianName;
     private final String guardianPhoneNumber;
