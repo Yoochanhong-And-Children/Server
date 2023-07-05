@@ -1,11 +1,11 @@
 package com.example.hackathon.domain.user.controller.dto.response;
 
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
+@Builder
 @Getter
-@AllArgsConstructor
 public class UserInfoResponse {
     private final Long id;
     private final String phoneNumber;
