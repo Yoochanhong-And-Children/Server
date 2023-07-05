@@ -25,7 +25,7 @@ public class WhetherMeal {
 
     @NotNull
     @Column(columnDefinition = "DATE")
-    private LocalDate date = LocalDate.now();
+    private LocalDate date;
 
     @NotNull
     @Enumerated(EnumType.STRING)
