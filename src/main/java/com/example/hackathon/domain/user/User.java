@@ -31,7 +31,7 @@ public class User {
     private String guardianPhoneNumber;
 
     @NotNull
-    @Column(columnDefinition = "char(255) default ''")
+    @Column(columnDefinition = "varchar(255) default ''")
     private String deviceToken;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
