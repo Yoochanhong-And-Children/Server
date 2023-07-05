@@ -16,7 +16,7 @@ public class User {
     private Long id;
 
     @Column(columnDefinition = "char(11)")
-    private String phoneNumber;
+    private String name;
 
     @NotNull
     @Column(columnDefinition = "varchar(5)")
@@ -31,7 +31,7 @@ public class User {
     private String deviceToken;
 
     public void update(String phoneNumber, String guardianName, String guardianPhoneNumber) {
-        this.phoneNumber = phoneNumber;
+        this.name = phoneNumber;
         this.guardianName = guardianName;
         this.guardianPhoneNumber = guardianPhoneNumber;
     }
