@@ -15,6 +15,9 @@ spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
 
+fcm:
+  value: your_fcm_value
+
 twilio:
   account:
     sid: your_twilio_account_sid
