@@ -1,8 +1,9 @@
 package com.example.hackathon.domain.user.service;
 
 import com.example.hackathon.domain.user.User;
-import com.example.hackathon.domain.user.controller.dto.SignUpRequest;
-import com.example.hackathon.domain.user.controller.dto.UpdateRequest;
+import com.example.hackathon.domain.user.controller.dto.request.SignUpRequest;
+import com.example.hackathon.domain.user.controller.dto.request.UpdateRequest;
+import com.example.hackathon.domain.user.controller.dto.response.UserInfoResponse;
 import com.example.hackathon.domain.user.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -30,8 +31,20 @@ public class UserService {
     @Transactional
     public void updateUser(String phoneNumber, UpdateRequest request) {
         User user = userRepository.findByPhoneNumber(phoneNumber)
-                .orElseThrow(() -> new RuntimeException("전화번호가 중복입니다."));
+                .orElseThrow(() -> new RuntimeException("찾을 수 없습니다."));
 
         user.update(request.getPhoneNumber(), request.getGuardianName(), request.getGuardianPhoneNumber());
+    }
+
+    @Transactional
+    public UserInfoResponse findByPhoneNumber(String phoneNumber) {
+        User user = userRepository.findByPhoneNumber(phoneNumber)
+                .orElseThrow(() -> new RuntimeException("찾을 수 없습니다."));
+
+        return new UserInfoResponse(
+                user.getPhoneNumber(),
+                user.getGuardianName(),
+                user.getGuardianPhoneNumber()
+        );
     }
 }
