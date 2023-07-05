@@ -10,11 +10,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
+@RequestMapping("/user")
 @RestController
 public class UserController {
 
     private final UserService userService;
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/signup")
     public UserInfoResponse signup(@Valid @RequestBody SignUpRequest request) {
         return userService.signup(request);
