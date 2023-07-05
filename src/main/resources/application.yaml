@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_HOST}:3306/hackathon?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://surl.ctxcxnjslr2o.ap-northeast-2.rds.amazonaws.com:3306/hackathon?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: admin
+    password: surladmin
 
   jpa:
     database: mysql
@@ -16,7 +16,7 @@ spring:
     property-naming-strategy: SNAKE_CASE
 
 fcm:
-  value: ${FCM_VALUE}
+  value: '{"type": "service_account","project_id": "yoochanhong-and-children","private_key_id": "693d4d9bc3c462435399b932ef629352fb3ec941","private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqzKyxV+ZtluGb\ng9rNHCo3A+0GeTmk23H3jtE/8ruKDNF/4rw/6eNFEJIgXIj9yXHqbCkA8sIMuqJP\nUCRBmQLFH6hPTgH2B5Ez1YZ8zqMcyVM7tYf7g/lm8o+ts5RM36N50C1F7l/XiBvW\nonpQxeVcIqqDq10wgf+sJz63Akp/WJVlOQ3v+/PQwzUy/1NwuMus9stvK38C1tya\n9Apw0uwgK/Kjw3YzV0iii7/QckVVlKeepSjtI0O8nrgMoMivQQlV9/dNy/d/aMwQ\nBlbfXa0C0CGCBB8skbGwRU9tL4ecKXkTw+3QwAczkcvLsqB9wImaqrU+x54FMIun\n5eX8pNKdAgMBAAECggEAIieAIA2BA2ig0EGfcxUe/vXew8ThiU0lnti1EMnYBTzX\ndvCO7uP1IcY0xlpivYc3K6a501n4AmYe12fh/CkeE++m70bc3wc32srn1BTZKsQ6\ni+3a1amYKaU3JIfMz8uHy+/cYcfPbBDoajT+6yCLoy8+dEqD/dN9Hj6RzLRdU9X9\npbsFWyH7cKSuGZAQnIrWNbj4j/4ecd25dRvqIUu8qEde17CZ8O3ZRLDOW7aDw0RM\nAo1jzoyZK3LuvpTpvoeiWlQiymBsysaXjIeUN7dYlM1/u1YL5RlFN7Jaho6vkDiz\ncXAAJsyrNv/LJCptg9RTdkYxZcLGP6fuqpbD9y2f4QKBgQDnunp475JR4AM2u5M3\nNDjIg3aHy+kvakylrbM8TjPby8q18FJZ1Sgp6qojwLzajfOLtk+aob4SfFonF4pb\no9o5CtAYCi5eMANPgc+FbWZ2NT21yTCVqMJUSCsZvQQS3Gel8KkFMJBe0o0U+L0D\nvGQGz+yUZF3OPG0Aky6JfuoLfQKBgQC8sHW1Sx/Jg6E81FVTP08gyhU54tHTH9/F\n0UchLjtrxMihCDYet18RTqx7CxsghmTTelRd9BvXnN4U1kn3ILI7gKy3ekmahHBW\nGGQw7+Bw8srv86/jQIB5khbz89x6Iy0KJcIKi7pG1jaixeZFBHvcx2s6Flr8LA1r\niGibuCtNoQKBgQCd7ah0bYpCRLLMBZCyieO9PGN271DwILk2HSjPi9iqDr0LvErT\nsINb9fOYxE2xghce+9RK5bq9rIRgqhmAlS4vvB/QknfBd2V6NVUycTnojCaPkxuK\nk+ZFPJ4rP3fcRtxY6qi2wb9S8Jp4VYG0XxuozOJGzBRmbyY2wxhvWtC1nQKBgFfc\nv2LlEW8veQQvR3AVOc5l605iHRx3aibeFYYQ1iCPqHC7tx/EeWNAxDYjbMVPb2G+\nQ8zgH5rd89e2FQkbU4M7nrFtIxrtcrXUc8sJ1/QgSnlDevKSFYEGkuOT+WVyPcXM\n4Tcx61KS6ywOhPQ8a0TaI0cQI9vq03DwOu3P63IhAoGBALdiZhiwq5o9NvKnURpa\nd06BRR80Qg3QAlg46uSN5fHf7cRCOYYuhyPn9rPI3tA6aoPpJbRK62iEWAAxueiH\npCFHYn2x3L2msIlvPkE8Y78F/miqHzKKENKGtRWFHTlQYWRrpkwMxPqwDkYQGltK\nYYcsMGR5C4YQak1gD0xOWOk9\n-----END PRIVATE KEY-----\n","client_email": "firebase-adminsdk-gg3du@yoochanhong-and-children.iam.gserviceaccount.com","client_id": "109158829829740614474","auth_uri": "https://accounts.google.com/o/oauth2/auth","token_uri": "https://oauth2.googleapis.com/token","auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gg3du%40yoochanhong-and-children.iam.gserviceaccount.com","universe_domain": "googleapis.com"}'
 
 twilio:
   account:
