@@ -7,11 +7,10 @@ import com.example.hackathon.domain.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
-@Controller
+@RestController
 public class UserController {
 
     private final UserService userService;
@@ -29,6 +28,6 @@ public class UserController {
 
     @GetMapping("/{id}")
     public UserInfoResponse getUserInfo(@PathVariable Long id) {
-        return userService.findByPhoneNumber(id);
+        return userService.getUserInfo(id);
     }
 }

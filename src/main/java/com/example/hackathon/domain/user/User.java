@@ -1,6 +1,5 @@
 package com.example.hackathon.domain.user;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -15,11 +14,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "char(11)")
+    @NotNull
+    @Column(columnDefinition = "char(5)")
     private String name;
 
     @NotNull
-    @Column(columnDefinition = "varchar(5)")
+    @Column(columnDefinition = "char(5)")
     private String guardianName;
 
     @NotNull
@@ -30,8 +30,8 @@ public class User {
     @Column(columnDefinition = "char(255) default ''")
     private String deviceToken;
 
-    public void update(String phoneNumber, String guardianName, String guardianPhoneNumber) {
-        this.name = phoneNumber;
+    public void update(String name, String guardianName, String guardianPhoneNumber) {
+        this.name = name;
         this.guardianName = guardianName;
         this.guardianPhoneNumber = guardianPhoneNumber;
     }

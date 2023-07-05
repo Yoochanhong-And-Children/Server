@@ -10,8 +10,8 @@ import lombok.Getter;
 public class SignUpRequest {
 
     @NotBlank
-    @Size(max = 11, message = "11자 까지 입력 가능합니다")
-    private String Name;
+    @Size(max = 5, message = "5자 까지 입력 가능합니다")
+    private String name;
 
     @NotBlank
     @Size(max = 5, message = "5자 까지 입력 가능합니다")

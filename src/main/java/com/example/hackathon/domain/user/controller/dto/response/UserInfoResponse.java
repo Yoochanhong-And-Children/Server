@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 public class UserInfoResponse {
     private final Long id;
-    private final String phoneNumber;
+    private final String name;
     private final String guardianName;
     private final String guardianPhoneNumber;
 }
