@@ -7,4 +7,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class NotificationRequest {
     private String deviceToken;
+    private String name;
 }

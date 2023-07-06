@@ -10,7 +10,7 @@ public class NotificationService {
 
     private final FcmService fcmService;
 
-    public void sendNotification(String deviceToken) {
-        fcmService.sendNotification("테스트", "테스트", deviceToken);
+    public void sendNotification(String deviceToken, String name) {
+        fcmService.sendNotification("알림", name + "님 아침 식사는 하셨나요?", deviceToken);
     }
 }
